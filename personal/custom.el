@@ -25,14 +25,10 @@
  ;; If there is more than one, they won't work right.
  )
 
-;; Set initial frame position and size
-;(setq initial-frame-alist
-      ;'((top . 0) (left . 0) (width . 180) (height . 60)))
 
-;; Start emacs maximized on Windows. If using X Windows, try starting emacs
-;;  with 'emacs -mm'
-;; (when (eq system-type 'windows-nt)
-    ;; (w32-send-sys-command 61488))
+;; Set default directory
+(when (eq system-type 'windows-nt)
+  (setq default-directory "C:/code/"))
 
 
 ;; Enable line numbers in files (but not shells etc.)
