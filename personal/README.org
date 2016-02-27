@@ -1,0 +1,30 @@
+* blokeley's customisations [sic] to bbatsov's emacs prelude
+
+** Installing on Windows 10
+
+1. Download emacs from http://ftp.gnu.org/gnu/emacs/windows/
+2. Unzip in root (C:\)
+3. `cd ~`
+4. `git clone https://github.com/blokeley/prelude .emacs.d`
+5. `cd .emacs.d`
+6. `git clone https://github.com/AndreaCrotti/yasnippet-snippets snippets`
+
+
+** Updating
+
+1. Run M-x prelude-update
+
+Then, if necessary...
+
+2. cd to ~/.emacs.d/
+3. `git checkout blokeley`
+4. `git status`
+5. `git commit`
+6. `git checkout master`
+7. `git fetch upstream`
+8. `git merge upstream/master`
+9. `git checkout blokeley`
+10. `git rebase master`
+11. `git commit` (no fast-forward?)
+
+Repeat the above for snippets.
