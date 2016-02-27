@@ -31,6 +31,11 @@
   (setq default-directory "C:/code/"))
 
 
+;; Enable yasnippet
+(require 'yasnippet)
+(yas-global-mode 1)
+
+
 ;; Enable line numbers in files (but not shells etc.)
 (add-hook 'find-file-hook (lambda () (linum-mode 1)))
 

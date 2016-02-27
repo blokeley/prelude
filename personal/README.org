@@ -16,6 +16,8 @@
 
 Then, if necessary...
 
+See https://help.github.com/articles/syncing-a-fork/
+
 2. cd to ~/.emacs.d/
 3. `git checkout blokeley`
 4. `git status`
