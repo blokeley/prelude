@@ -1,5 +1,10 @@
 *~
 *.elc
+.cask
+.DS_Store
+.emacs.desktop
+.emacs.desktop.lock
+.smex-items
 auto-save-list
 recentf
 savehist
@@ -10,15 +15,11 @@ el-get
 semanticdb
 url
 ede-projects.el
-.DS_Store
 places
-.smex-items
 savefile/
 snippets
 projectile-bookmarks.eld
 session*
-.cask
+server
 tramp
 /var/pcache
-.emacs.desktop
-.emacs.desktop.lock
