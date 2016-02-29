@@ -14,7 +14,6 @@
  ;; If there is more than one, they won't work right.
  '(desktop-save-mode t)
  '(fill-column 80)
- '(initial-major-mode (quote python-mode))
  '(initial-scratch-message nil)
  '(scroll-bar-mode nil)
  '(visible-bell t))
@@ -84,26 +83,29 @@ NAME at the end of your .emacs"
     )))
 
 
-;; pretty print xml region
-(defun pretty-print-xml-region (begin end)
-  "Pretty format XML markup in region between BEGIN and END.
-The function inserts linebreaks
-to separate tags that have nothing but whitespace between them.
-It then indents the markup by using nxml's indentation rules."
+(defun pretty-print-sgml-region (begin end)
+  "Pretty format SGML markup in region between BEGIN and END.
+The function inserts linebreaks to separate tags that have nothing but
+whitespace between them.  It then indents the markup by using nxml's
+indentation rules."
   (interactive "r")
   (save-excursion
     (nxml-mode)
     (goto-char begin)
     ;; split <foo><foo> or </foo><foo>, but not <foo></foo>
     (while (search-forward-regexp ">[ \t]*<[^/]" end t)
-      (backward-char 2) (insert "\n") (cl-incf end))
+      (backward-char 2)
+      (insert "\n")
+      (cl-incf end))
     ;; split <foo/></foo> and </foo></foo>
     (goto-char begin)
     (while (search-forward-regexp "<.*?/.*?>[ \t]*<" end t)
-      (backward-char) (insert "\n") (cl-incf end))
+      (backward-char)
+      (insert "\n")
+      (cl-incf end))
     (indent-region begin end nil)
     (normal-mode))
-  (message "XML indented"))
+  (message "SGML indented"))
 
 
 ;; Set IPython interpreter
