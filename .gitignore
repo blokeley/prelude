@@ -5,6 +5,7 @@
 .emacs.desktop
 .emacs.desktop.lock
 .smex-items
+anaconda-mode/
 auto-save-list
 recentf
 savehist
