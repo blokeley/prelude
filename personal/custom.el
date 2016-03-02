@@ -71,6 +71,19 @@ NAME at the end of your .emacs"
        (newline)))                           ; insert a newline
 
 
+(defun write-input-ring (filename)
+  "Write shell input to FILENAME then visit FILENAME."
+  (interactive "F")
+  (let ((comint-input-ring-file-name filename))
+    (comint-write-input-ring))
+
+  (if (file-readable-p filename)
+      ;; If the input ring was saved to a file, visit that file
+      (find-file filename)
+    ;; Else report that no input was saved
+    (message "This buffer has no shell history.")))
+
+
 (defun clean-text ()
   "Yank text from the killring, replace newlines with spaces, and copy to killring."
   (interactive)
@@ -79,12 +92,11 @@ NAME at the end of your .emacs"
     (goto-char (point-min))
     (while (search-forward "(\n)" nil t)
       (replace-match " ")
-      (clipboard-kill-ring-save (point-min) (point-max))
-    )))
+      (clipboard-kill-ring-save (point-min) (point-max)))))
 
 
-(defun pretty-print-sgml-region (begin end)
-  "Pretty format SGML markup in region between BEGIN and END.
+(defun format-sgml-region (begin end)
+  "Format SGML markup in region between BEGIN and END.
 The function inserts linebreaks to separate tags that have nothing but
 whitespace between them.  It then indents the markup by using nxml's
 indentation rules."
