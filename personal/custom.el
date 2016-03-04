@@ -57,6 +57,17 @@
 (global-set-key "\M-;" 'comment-or-uncomment-region-or-line)
 
 
+;; Enable convenient buffer switching
+(defun switch-to-previous-buffer ()
+  "Switch to most recent buffer.
+Repeated calls toggle back and forth between the most recent two buffers."
+  (interactive)
+  (switch-to-buffer (other-buffer (current-buffer) 1)))
+
+;; Set key binding for buffer switching
+(global-set-key (kbd "C-`") 'switch-to-previous-buffer)
+
+
 (defun save-macro (name)
   "Save a macro.
 Take a NAME as argument and save the last defined macro under
@@ -126,13 +137,6 @@ indentation rules."
 ;; Require Python after the interpreter variables are set so we don't
 ;; have to use setq on a free global variable
 (require 'python)
-
-(defun python-shell-autoreload ()
-  "Autoreload Python modules in Python inferior shell."
-  (interactive)
-  (python-shell-send-string-no-output "%load_ext autoreload\n")
-  (python-shell-send-string-no-output "%autoreload 2\n")
-  (python-shell-switch-to-shell))
 
 
 (defun python-test-project ()
