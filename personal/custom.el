@@ -16,6 +16,7 @@
  '(fill-column 80)
  '(initial-scratch-message nil)
  '(scroll-bar-mode nil)
+ '(scroll-margin 3)
  '(visible-bell t))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
@@ -55,17 +56,6 @@
 
 ;; Rebind comment-dwim to comment-or-uncomment-region-or-line
 (global-set-key "\M-;" 'comment-or-uncomment-region-or-line)
-
-
-;; Enable convenient buffer switching
-(defun switch-to-previous-buffer ()
-  "Switch to most recent buffer.
-Repeated calls toggle back and forth between the most recent two buffers."
-  (interactive)
-  (switch-to-buffer (other-buffer (current-buffer) 1)))
-
-;; Set key binding for buffer switching
-(global-set-key (kbd "C-`") 'switch-to-previous-buffer)
 
 
 (defun save-macro (name)
