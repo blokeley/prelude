@@ -16,8 +16,7 @@
  '(fill-column 80)
  '(initial-scratch-message nil)
  '(scroll-bar-mode nil)
- '(scroll-margin 3)
- '(visible-bell t))
+ '(scroll-margin 3))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
