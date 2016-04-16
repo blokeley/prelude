@@ -14,9 +14,11 @@ url
 ede-projects.el
 .DS_Store
 # custom.el
+.\#custom.el
 places
 .smex-items
 savefile/
+server/server
 /prelude-modules.el
 projectile-bookmarks.eld
 session*

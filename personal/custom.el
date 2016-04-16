@@ -31,8 +31,8 @@
 
 
 ;; Enable yasnippet
-;; (require 'yasnippet)
-;; (yas-global-mode 1)
+(require 'yasnippet)
+(yas-global-mode 1)
 
 
 ;; Enable line numbers in files (but not shells etc.)
