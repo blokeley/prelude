@@ -128,7 +128,7 @@ indentation rules."
 (require 'python)
 
 ;; Start an inferior Python process if one is not running
-(add-hook 'python-mode-hook 'run-python)
+;; (add-hook 'python-mode-hook 'run-python)
 
 
 (defun python-test-project ()
