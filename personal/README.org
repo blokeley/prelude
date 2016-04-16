@@ -5,6 +5,13 @@
 1. Download emacs from http://ftp.gnu.org/gnu/emacs/windows/
 2. Unzip in root (C:\)
 3. Ensure the =HOME= environment variable is set to C:\Users\USERNAME
+4. If GnuTLS is not installed (which it probably won't be with emacs 24.x for
+   Windows, then [[http://xn--9dbdkw.se/diary/how_to_enable_GnuTLS_for_Emacs_24_on_Windows/index.en.html][follow the instructions here]]
+   to install it.  It is required to download Emacs packages over a secure
+   connection.
+5. Add POSIX utilities to your path.  If you have GitHub for Windows installed,
+   you can add =%USERPROFILE%\AppData\Local\GitHub\PORTAB~2\usr\bin= to your
+   =PATH= environment variable.
 3. =cd ~=
 4. =git clone --recursive https://github.com/blokeley/prelude .emacs.d=
 
@@ -13,6 +20,7 @@
 See:
 - https://help.github.com/articles/configuring-a-remote-for-a-fork/
 - https://help.github.com/articles/syncing-a-fork/
+
 
 1. =cd ~/.emacs.d/=
 2. =git status=
