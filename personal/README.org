@@ -13,7 +13,7 @@
    you can add =%USERPROFILE%\AppData\Local\GitHub\PORTAB~2\usr\bin= to your
    =PATH= environment variable.
 3. =cd ~=
-4. =git clone --recursive https://github.com/blokeley/prelude .emacs.d=
+4. =git clone https://github.com/blokeley/prelude .emacs.d=
 
 ** Updating
 
@@ -23,10 +23,9 @@ See:
 
 
 1. =cd ~/.emacs.d/=
-2. =git status=
-3. =git commit=
+2. Check that no files have been changed: =git status=.  If they have,
+   =git add=, then =git commit=
 4. =git fetch upstream=
 5. =git merge upstream/master=
-6. Update any remotes (such as snippets) =git submodule update=
-7. Push everything back to origin =git push=
-8. Update emacs packages using =M-x package-list-packages RET U x=
+6. Push everything back to origin =git push=
+7. Update emacs packages using =M-x package-list-packages RET U x=
