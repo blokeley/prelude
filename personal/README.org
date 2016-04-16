@@ -1,0 +1,22 @@
+* blokeley's customisations [sic] to bbatsov's emacs prelude
+
+** Installing on Windows 10
+
+1. Download emacs from http://ftp.gnu.org/gnu/emacs/windows/
+2. Unzip in root (C:\)
+3. Ensure the =HOME= environment variable is set to C:\Users\USERNAME
+3. =cd ~=
+4. =git clone https://github.com/blokeley/prelude .emacs.d=
+5. =cd .emacs.d=
+# 6. =git clone https://github.com/AndreaCrotti/yasnippet-snippets snippets=
+
+
+** Updating
+
+See https://help.github.com/articles/syncing-a-fork/
+
+1. =git status=
+2. =git commit=
+3. =git fetch upstream=
+4. =git merge upstream/master=
+5. =git push=
