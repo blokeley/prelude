@@ -127,6 +127,9 @@ indentation rules."
 ;; have to use setq on a free global variable
 (require 'python)
 
+;; Start an inferior Python process if one is not running
+(add-hook 'python-mode-hook 'run-python)
+
 
 (defun python-test-project ()
   "Run default Python unit test command."
@@ -173,6 +176,9 @@ indentation rules."
   (comint-previous-input 1)
   (insert "\n"))
 
+
+;; Set the markdown command for markdown previews
+(defvar markdown-command "markdown_py.bat")
 
 (provide 'custom)
 ;;; custom.el ends here
