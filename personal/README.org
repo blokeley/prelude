@@ -6,17 +6,19 @@
 2. Unzip in root (C:\)
 3. Ensure the =HOME= environment variable is set to C:\Users\USERNAME
 3. =cd ~=
-4. =git clone https://github.com/blokeley/prelude .emacs.d=
-5. =cd .emacs.d=
-# 6. =git clone https://github.com/AndreaCrotti/yasnippet-snippets snippets=
-
+4. =git clone --recursive https://github.com/blokeley/prelude .emacs.d=
 
 ** Updating
 
-See https://help.github.com/articles/syncing-a-fork/
+See:
+* https://help.github.com/articles/configuring-a-remote-for-a-fork/
+* https://help.github.com/articles/syncing-a-fork/
 
-1. =git status=
-2. =git commit=
-3. =git fetch upstream=
-4. =git merge upstream/master=
-5. =git push=
+1. =cd ~/.emacs.d/=
+2. =git status=
+3. =git commit=
+4. =git fetch upstream=
+5. =git merge upstream/master=
+6. Update any remotes (such as snippets) =git submodule update=
+7. Push everything back to origin =git push=
+8. Update emacs packages using =M-x package-list-packages RET U x=
