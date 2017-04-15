@@ -123,6 +123,7 @@ indentation rules."
 ;; Set IPython interpreter
 (defvar python-shell-interpreter "ipython")
 (defvar python-shell-interpreter-args "-i")
+(setq python-shell-completion-native-enable nil)
 ;; Require Python after the interpreter variables are set so we don't
 ;; have to use setq on a free global variable
 (require 'python)
